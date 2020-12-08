@@ -1,0 +1,18 @@
+#EmailAddress,#contactNo,#UserName,#message{
+  outline: none;
+  border-left:8px solid black;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 5px;
+  height: 50px;
+  font-size: 20px;
+  transition: .3s;
+}
+#EmailAddress:focus,#blogContent:focus,#contactNo:focus,#UserName:focus,#message:focus{
+  border-left: none;
+  border-bottom:5px solid dodgerblue;
+  box-shadow: 0 0 8px 0 dodgerblue;
+}

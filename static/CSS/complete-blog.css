@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Fredoka+One&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+body{
+  font-family:'Poppins',cursive;
+  overflow-x: hidden;
+}
+/*Search bar tab and social media icons*/
+.search-form input{
+  border: none;
+  color: grey;
+  font-style: italic;
+  height: 40px;
+  overflow: hidden;
+  outline: none;
+  font-family: 'Comic Neue', cursive;
+}
+.search-form button{
+  background: white;
+  border: none;
+}
+.search-form button i:hover{
+  color: #ffb6c1;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.mysocial-media a {
+  text-decoration: none;
+  color: black;
+}
+.mysocial-media a:hover{
+  color:#ffb6c1;
+  transition: 0.5s ease;
+}
+/*Search bar responsive*/
+@media (min-width:992px) {
+  .mysocial-media{
+    position: absolute;
+    right: 100px;
+    top: 20px;
+  }
+  .search-form{
+    position: absolute;
+    left: 100px;
+    top: 10px;
+    width: 50%;
+  }
+}
+@media (min-width:768px) and (max-width:991px) {
+  .mysocial-media{
+    position: absolute;
+    right: 80px;
+    top: 20px;
+  }
+  .search-form{
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    width: 50%;
+  }
+}
+@media (min-width:576px) and (max-width:767px) {
+  .mysocial-media{
+    position: absolute;
+    right: 50px;
+    top: 20px;
+  }
+  .search-form{
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    width: 50%;
+  }
+}
+@media (max-width:575px) {
+  .mysocial-media{
+    position: absolute;
+    right: 0px;
+    top: 20px;
+  }
+  .search-form{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 60%;
+  }
+}
+
+.mysocial-media a{
+  padding: 10px;
+  width: 15px;
+  height: 15px;
+}
+.top-search-bar{
+  position:relative;
+  box-shadow: 5px 5px 20px grey;
+  height: 60px;
+}
+/*Menu logo*/
+.navbar a img{
+  text-align: center !important;
+  margin-top: 30px;
+}
+/*Menu-Bar*/
+#Main-Menu .navbar{
+  background-color: white;
+}
+.inside-navbar-brand{
+  animation: img 0.3s;
+  padding-bottom: 10px;
+}
+#closebutton{
+  background-color: white;
+  border: none;
+  padding: 5px;
+}
+@keyframes img {
+  from{
+    opacity: 0
+  }
+  to{
+    opacity: 1
+  }
+}
+.navbaranim{
+  animation: img 0.5s;
+}
+@media (max-width:991px) {
+  #Main-Menu #navbarNavDropdown ul{
+    animation:translator 0.6s;
+  }
+  @keyframes translator {
+    from{
+      transform: translate(-100px,0px);
+    }
+    to{
+      transform: translate(0px,0px);
+    }
+  }
+}
+@media (max-width:991px) {
+  .mobileMenu{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: translateX(-100%);
+    transition: all ease 0.25s;
+    background-color: white;
+  }
+  .open{
+    transform: translateX(0);
+  }
+  .navbar-nav{
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+  #navbarNavDropdown .navbar-nav li{
+    background-color: #f2f4f8;
+    margin-top: 2px;
+  }
+  h6{
+      background-color: #f2f4f8;
+  }
+}
+
+#Main-Menu nav #navbarNavDropdown .navbar-nav li a:hover{
+  color:#ffb6c1;
+  transition: 0.5s ease;
+}
+#Main-Menu nav #navbarNavDropdown .navbar-nav li a{
+   font-family: 'Poppins', sans-serif;
+   color: black;
+   padding-left: 25px;
+   padding-right: 25px;
+}
+@media (min-width:991px) {
+  .dropdown:hover>.dropdown-menu{
+    display: block;
+  }
+  .dropdown-menu{
+    animation: fadeIn 0.5s,translater 0.5s;
+    background: none;
+  }
+  #megamenu div a{
+    padding: 5px;
+  }
+  @keyframes fadeIn {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity:1;
+    }
+  }
+  @keyframes translater {
+    from{
+      top: 130px;
+    }
+  }
+  .dropright:hover>.dropmenu2{
+    display: block;
+  }
+  .dropmenu2{
+    animation: translateX 0.8s,fadeIn 1.5s;
+  }
+  @keyframes translateX {
+    from{
+      right: 130px;
+    }
+  }
+}
+
+/*Menu-bar ends*/
+/*Main Content Of Blog Starts*/
+
+@media (max-width:567px) {
+  #postinfo{
+    background-color:white;
+    color: white;
+    position: absolute;
+    bottom: -27px;
+    left:20%;
+    border-radius: 3rem;
+    padding: 1rem;
+  }
+  #postinfo a{
+    font-size: 16px;
+  }
+}
+@media (min-width:568px) and (max-width:767px) {
+  #postinfo{
+    background-color:white;
+    color: white;
+    position: absolute;
+    bottom: -30px;
+    left:33%;
+    border-radius: 3rem;
+    padding: 1rem;
+  }
+}
+@media (min-width:768px) and (max-width:991px) {
+  #postinfo{
+    background-color:white;
+    color: white;
+    position: absolute;
+    bottom: -15px;
+    left:35%;
+    border-radius: 3rem;
+    padding: 1rem;
+  }
+  #postinfo a{
+    font-size: 18px;
+  }
+  .thumbnail-blog{
+    padding: 20px;
+  }
+  #blogdetails p,#blogdetails a h5{
+    padding-left: 20px;
+  }
+}
+@media (min-width:992px) {
+  #postinfo{
+    background-color:white;
+    color: white;
+    position: absolute;
+    bottom: -27px;
+    left:33%;
+    border-radius: 3rem;
+    padding: 1rem;
+  }
+  #postinfo a{
+    font-size: 18px;
+  }
+  #blogdetails p,#blogdetails a h5{
+    margin-left: 50px;
+  }
+}
+.thumbnail-blog{
+  position: relative;
+  margin-top: 40px;
+}
+#postinfo a{
+  text-decoration: none;
+  color: black;
+  font-style: 'Poppins',cursive;
+  font-weight: bold;
+}
+#blogdetails{
+  position: relative;
+  top: 30px;
+}
+#blogdetails a h5{
+  text-decoration: none;
+  color: black;
+  font-family:"Times New Roman",Times,serif;
+  font-weight: 200;
+  font-size: 30px;
+}
+#blogdetails a{
+  font-family: 'Poppins',cursive;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#blogdetails p{
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+  color: grey;
+  line-height: 2;
+}
+#blogdetails p span,#author{
+  padding-top: 10px;
+  font-style: italic;
+}
+#author,#blogdetails p span a{
+  color: black;
+  text-decoration: none;
+}
+#post-meta{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/*Side categories Starts*/
+@media (max-width:567px) {
+  #side-event{
+    margin-top: 50px;
+  }
+  #sideblogdetails h6{
+    font-size: 14px;
+    margin-top:40px;
+  }
+  #sideblogdetails p{
+    margin-top: 20px;
+  }
+}
+@media (min-width:568px) and (max-width:767px) {
+  #side-event{
+    margin-top: 50px;
+  }
+  #sideblogdetails h6{
+    font-size: 20px;
+    margin-top:60px;
+  }
+  #sideblogdetails p{
+    margin-top: 20px;
+  }
+}
+@media (min-width:768px) and (max-width:991px) {
+  #side-event{
+    margin-top: 70px;
+  }
+  #sideblogdetails h6{
+    font-size: 24px;
+    margin-top:80px;
+  }
+  #sideblogdetails p{
+    margin-top: 20px;
+  }
+}
+@media (min-width:992px) {
+  #side-event{
+    margin-top: 250px;
+  }
+  #sideblogdetails h6{
+    font-size: 16px;
+    margin-top:35px;
+  }
+  #sideblogdetails p{
+    margin-top: 20px;
+  }
+}
+#titleforrelatedpost h5{
+  margin-top: 40px;
+  color: black;
+  font-family:"Times New Roman",Times,serif;
+  font-weight: bold;
+}
+#side-event a{
+  margin: 10px;
+  font-family: 'Poppins',cursive;
+  border-radius: 20px;
+}
+#side-event h5{
+  text-decoration: none;
+  color: black;
+  font-family:"Times New Roman",Times,serif;
+  font-weight: bold;
+}
+#related-post-content{
+  margin-top: 40px;
+}
+#sideblogdetails{
+  font-family: 'Poppins',cursive;
+}
+#sideblogdetails h6{
+  font-family:"Times New Roman",Times,serif;
+  font-weight: 200;
+  color: black;
+  background-color: white;
+}
+#sideblogdetails span{
+  color: grey;
+  font-style: italic;
+  font-size: 12px;
+}
+#sideblogdetails p{
+  //margin-top: 40px;
+  font-style: italic;
+  font-size: 12px;
+}
+/*side Categories Ends*/
+/*Main Content Of Blog Ends*/
+/*Footer Starts*/
+#footer{
+  margin-top: 50px;
+  color: white;
+}
+#About{
+  margin-top: 20px;
+  padding: 20px;
+}
+#About h3{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins',cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#About p{
+  font-family: 'Cairo', sans-serif;
+}
+#instafeed{
+  margin-top: 20px;
+}
+#instafeed h3{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins',cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#instafeed img{
+  display: inline-block;
+  width: 25%;
+  height: 50%;
+  margin: .3rem .4rem;
+}
+#footersocial{
+  margin-top: 20px;
+}
+#footersocial h3{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins',cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#footersocial a{
+  font-size: 25px;
+  margin: 10px;
+  color: white;
+}
+/*Footer Ends*/

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/create-post.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/contactUs.css') }}">
+    <title>Blog Website</title>
+  </head>
+  <body>
+    <!--Search bar Section-->
+      <div class="top-search-bar">
+        <div class="search-tab">
+          <form class="search-form" action="#" method="get">
+            <input type="search" name="search" value="" placeholder="Search and hit enter...">
+            <button type="submit" name="button"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <div class="mysocial-media">
+          <a href="#"><i class="fa fa-facebook-f"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-pinterest"></i></a>
+        </div>
+      </div>
+    <!--Search bar sections ends-->
+    <div>
+      <!--Logo Image-->
+      <nav class="navbar navbar-light">
+        <a class="navbar-brand mx-auto d-none d-lg-block" href="/">
+          <img src="{{ url_for('static', filename='Images/bloggee.png') }}" width="161px" height="37px" alt="logo" loading="lazy">
+        </a>
+      </nav>
+    </div>
+    <!--Contact Us For Starts-->
+    <form action="/contactus" class="text-center" method="post">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <input class="ml-0" type="text" name="email" id="EmailAddress" autocomplete="off" placeholder="Enter Email Address" style="width:100%;"><br>
+            <input class="ml-0" type="text" name="name" id="UserName" autocomplete="off" placeholder="Enter Your Name" style="width:100%;"><br>
+            <input class="ml-0" type="text" name="phone_num" id="contactNo" autocomplete="off" placeholder="Enter contact no." style="width:100%;"><br>
+            <textarea class="form-control" name="message" rows="8" cols="40" id="blogContent" placeholder="Tell Your Message...."></textarea><br>
+          </div>
+        </div>
+      </div>
+      <button type="submit" name="SUBMIT" class="mx-auto" id="publishbtn"><i class="fa fa-check p-2"></i>SUBMIT</button>
+    </form>
+    <!--Contact Us Form Ends-->
+  </body>
+</html>

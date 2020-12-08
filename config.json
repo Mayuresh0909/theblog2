@@ -1,0 +1,15 @@
+{
+
+  "params":
+  {
+    "local_server": "True",
+    "local_uri" : "mysql://root:@localhost/blogee",
+    "prod_uri" : "mysql://root:@localhost/blogee",
+    "email_username" : "crapid1234@gmail.com",
+    "email_password" : "gamesgames",
+    "no_of_posts" : 50,
+    "upload_location" : "C:\\Users\\mayur\\Desktop\\Documents\\College Documents\\Semesters\\sem 5\\WDL\\mycollege blog\\flask\\theblog\\uploaded_images"
+
+  }
+
+}

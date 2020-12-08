@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Blog Website</title>
+</head>
+
+<body>
+
+<!--Search bar Section-->
+<div class="top-search-bar">
+    <div class="search-tab">
+        <form class="search-form" action="#" method="get">
+            <input type="search" name="search" value="" placeholder="Search and hit enter...">
+            <button type="submit" name="button"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+    <div class="mysocial-media">
+        <a href="#"><i class="fa fa-facebook-f"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-pinterest"></i></a>
+    </div>
+</div>
+<!--Search bar sections ends-->
+<!--Menu bar-->
+<div>
+    <!--Logo Image-->
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand mx-auto d-none d-lg-block" href="/">
+            <img src="{{ url_for('static', filename='Images/bloggee.png') }}" width="161px" height="37px">
+        </a>
+    </nav>
+</div>
+<!--Main Menu-->
+<div id="Main-Menu" class="sticky-top">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light justify-content-sm-start" id="MenuBar">
+        <a class="navbar-brand d-lg-none inside-navbar-brand ml-lg-0 ml-2 mr-auto" id="inside-navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='Images/bloggee.png') }}" width="161px" height="30px">
+        </a>
+        <button id="navbutton" class="navbar-toggler align-self-start p-3" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mobileMenu d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end p-3 p-lg-0 mt-7 mt-lg-0"
+             id="navbarNavDropdown">
+            <ul class="navbar-nav mx-lg-auto align-self-stretch">
+                <li class="ml-auto">
+                    <button type="button" name="close" id="closebutton" class="d-block d-lg-none"> X</button>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a id="technicaldropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TECHNICAL</a>
+                    <div class="dropdown-menu" aria-labelledby="technicaldropdown">
+                        <a class="dropdown-item" href="/hackathon">HACKATHON</a>
+                        <a class="dropdown-item" href="/mockplacement">MOCK PLACEMENT</a>
+                        <a class="dropdown-item" href="/softwaredocumentation">SOFTWARE DOCUMENTATION</a>
+                        <a class="dropdown-item" href="/technohunt">TECHNOHUNT</a>
+                        <a class="dropdown-item" href="/blindcode">BLIND CODE</a>
+                        <a class="dropdown-item" href="/chemshala">CHEMSHALA</a>
+                        <a class="dropdown-item" href="/techexpo">TECH EXPO</a>
+                        <a class="dropdown-item" href="/prototype">PROTOTYPE</a>
+                        <a class="dropdown-item" href="technicalposterpresentation">TECHNICAL POSTER PRESENTATION</a>
+                        <a class="dropdown-item" href="technicalquiz">TECHNICAL QUIZ</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" id="navbarDropdownMenuNonTech">NON-TECHNICAL</a>
+                    <div class="dropdown-menu" id="nontechsubmenu">
+                        <div class="dropright d-none d-lg-block">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">GAMING</a>
+                            <div class="dropdown-menu" id="dropmenu2">
+                                <a class="dropdown-item" href="/pubg">PUBG</a>
+                                <a class="dropdown-item" href="/livecs">LIVE CS</a>
+                                <a class="dropdown-item" href="/fifa">FIFA</a>
+                                <a class="dropdown-item" href="/langaming">LAN GAMING</a>
+                            </div>
+                        </div>
+                        <div class="dropright d-none d-lg-block">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
+                               id="dancesubmenu" aria-haspopup="true" aria-expanded="false">DANCE</a>
+                            <div class="dropdown-menu" id="dropmenu3" aria-labelledby="dancesubmenu">
+                                <a class="dropdown-item" href="/solodance">SOLO DANCE</a>
+                                <a class="dropdown-item" href="/groupdance">GROUP DANCE</a>
+                                <a class="dropdown-item" href="/duet">DUET</a>
+                            </div>
+                        </div>
+                        <div class="dropright d-none d-lg-block">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">ARTISTRY</a>
+                            <div class="dropdown-menu" id="dropmenu4">
+                                <a class="dropdown-item" href="/filmz">FILMZ</a>
+                                <a class="dropdown-item" href="/picturesque">PICTURESQUE</a>
+                                <a class="dropdown-item" href="/storyandpoetry">STORY & POETRY</a>
+                                <a class="dropdown-item" href="/facepainting">FACE PAINTING</a>
+                                <a class="dropdown-item" href="teechart">TEESH ART</a>
+                            </div>
+                        </div>
+                        <div class="dropright d-none d-lg-block">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">SINGING</a>
+                            <div class="dropdown-menu" id="dropmenu5">
+                                <a class="dropdown-item" href="/solosinging">SOLO</a>
+                                <a class="dropdown-item" href="/duetsinging">DUET</a>
+                                <a class="dropdown-item" href="/instrumental">INSTRUMENTAL</a>
+                                <a class="dropdown-item" href="/bandwars">BAND WARS</a>
+                            </div>
+                        </div>
+                        <div class="dropright d-none d-lg-block">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">FUN</a>
+                            <div class="dropdown-menu" id="dropmenu6">
+                                <a class="dropdown-item" href="/csimurdermystery">CSI(MURDER MYSTERY)</a>
+                                <a class="dropdown-item" href="/escapetheroom">ESCAPE THE ROOM</a>
+                                <a class="dropdown-item" href="/elocution">ELOCUTION</a>
+                                <a class="dropdown-item" href="/scavengerhunt">SCAVENGER HUNT</a>
+                                <a class="dropdown-item" href="/waterwarrior">WATER WARRIOR</a>
+                                <a class="dropdown-item" href="/fashionshow">FASHION SHOW</a>
+                                <a class="dropdown-item" href="/debate">DEBATE</a>
+                                <a class="dropdown-item" href="/wolfofwallstreet">WOLF OF WALL STREET</a>
+                                <a class="dropdown-item" href="/saltact">SALT ACT</a>
+                                <a class="dropdown-item" href="/inquisitive">INQUISITIVE</a>
+                                <a class="dropdown-item" href="/treasurehunt">TREASURE HUNT</a>
+                            </div>
+                        </div>
+                        <div class="container d-none d-lg-none" id="megamenu"
+                             style="font-family:'Poppins', sans-serif;color:black;">
+                            <div class="row">
+                                <div class=" col-sm-3 col-lg-3">
+                                    <h6>GAMING</h6>
+                                    <a class="dropdown-item" href="/pubg">PUBG</a>
+                                    <a class="dropdown-item" href="/livecs">LIVE CS</a>
+                                    <a class="dropdown-item" href="/fifa">FIFA</a>
+                                    <a class="dropdown-item" href="/langaming">LAN GAMING</a>
+                                </div>
+                                <div class="col-sm-3 col-lg-3">
+                                    <h6>DANCE</h6>
+                                    <a class="dropdown-item" href="/solodance">SOLO DANCE</a>
+                                    <a class="dropdown-item" href="/groupdance">GROUP DANCE</a>
+                                    <a class="dropdown-item" href="/duet">DUET</a>
+                                </div>
+                                <div class="col-sm-3 col-lg-3">
+                                    <h6>SINGING</h6>
+                                    <a class="dropdown-item" href="/solosinging">SOLO</a>
+                                    <a class="dropdown-item" href="/duetsinging">DUET</a>
+                                    <a class="dropdown-item" href="/instrumental">INSTRUMENTAL</a>
+                                    <a class="dropdown-item" href="/bandwars">BAND WARS</a>
+                                </div>
+                                <div class="col-sm-3 col-lg-3">
+                                    <h6>ARTISTRY</h6>
+                                    <a class="dropdown-item" href="/filmz">FILMZ</a>
+                                    <a class="dropdown-item" href="/picturesque">PICTURESQUE</a>
+                                    <a class="dropdown-item" href="/storyandpoetry">STORY & POETRY</a>
+                                    <a class="dropdown-item" href="/facepainting">FACE PAINTING</a>
+                                    <a class="dropdown-item" href="teechart">TEESH ART</a>
+                                </div>
+                                <div class="col-sm-3 col-lg-3">
+                                    <h6>FUN</h6>
+                                    <a class="dropdown-item" href="/csimurdermystery">CSI(MURDER MYSTERY)</a>
+                                    <a class="dropdown-item" href="/escapetheroom">ESCAPE THE ROOM</a>
+                                    <a class="dropdown-item" href="/elocution">ELOCUTION</a>
+                                    <a class="dropdown-item" href="/scavengerhunt">SCAVENGER HUNT</a>
+                                    <a class="dropdown-item" href="/waterwarrior">WATER WARRIOR</a>
+                                    <a class="dropdown-item" href="/fashionshow">FASHION SHOW</a>
+                                    <a class="dropdown-item" href="/debate">DEBATE</a>
+                                    <a class="dropdown-item" href="/wolfofwallstreet">WOLF OF WALL STREET</a>
+                                    <a class="dropdown-item" href="/saltact">SALT ACT</a>
+                                    <a class="dropdown-item" href="/inquisitive">INQUISITIVE</a>
+                                    <a class="dropdown-item" href="/treasurehunt">TREASURE HUNT</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DEPARTMENT
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="my-menu-dropdown">
+                        <a class="dropdown-item" href="/computer">COMPUTER</a>
+                        <a class="dropdown-item" href="/mechanical">MECHANICAL</a>
+                        <a class="dropdown-item" href="/it">IT</a>
+                        <a class="dropdown-item" href="/extc">EXTC</a>
+                        <a class="dropdown-item" href="/instrumentation">INSTRUMENTATION</a>
+                        <a class="dropdown-item" href="/chemical">CHEMICAL</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="sportsbutton" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" href="#">SPORTS</a>
+                    <div class="dropdown-menu">
+                        <div class="dropright d-none d-lg-block">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">BOARD GAMES</a>
+                            <div class="dropdown-menu" id="dropmenu7">
+                                <a class="dropdown-item" href="/chess">CHESS</a>
+                                <a class="dropdown-item" href="/carrom">CARROM(SINGLES)</a>
+                                <a class="dropdown-item" href="/carromduet">CARROM(DUET)</a>
+                                <a class="dropdown-item" href="/antichess">ANTI CHESS</a>
+                            </div>
+                        </div>
+                        <div class="dropright d-none d-lg-block">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">CRICKET</a>
+                            <div class="dropdown-menu" id="dropmenu8">
+                                <a class="dropdown-item" href="/boxcricket">BOX CRICKET</a>
+                                <a class="dropdown-item" href="/neoncricket">NEON CRICKET</a>
+                                <a class="dropdown-item" href="/fieldcricket">FIELD CRICKET</a>
+                                <a class="dropdown-item" href="/1on1cricket">ONE ON ONE CRICKET</a>
+                            </div>
+                        </div>
+                        <div class="dropright d-none d-lg-block">
+                            <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">FOOTBALL</a>
+                            <div class="dropdown-menu" id="dropmenu9">
+                                <a class="dropdown-item" href="/footballleague">FOOTBALL LEAGUE</a>
+                                <a class="dropdown-item" href="/3asidefutsal">3 A-SIDE FUTSAL</a>
+                                <a class="dropdown-item" href="/interdepartmentfootball">INTERDEPARTMENT FOOTBALL</a>
+                            </div>
+                        </div>
+                        <div class="dropright d-none d-lg-block">
+                            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false" href="#">FIELD SPORTS</a>
+                            <div class="dropdown-menu" id="dropmenu10">
+                                <a class="dropdown-item" href="/badminton">BADMINTON</a>
+                                <a class="dropdown-item" href="/kabbadi">KABBADI</a>
+                                <a class="dropdown-item" href="/athletics">ATHLETICS</a>
+                                <a class="dropdown-item" href="/khokho">KHO-KHO</a>
+                                <a class="dropdown-item" href="/tugofwar">TUG OF WAR</a>
+                            </div>
+                        </div>
+
+                        <div class="container d-none d-lg-none" id="sportsubmenu"
+                             style="font-family:'Poppins', sans-serif;color:black;">
+                            <div class="row">
+                                <div class="col-lg-3 col-sm-4">
+                                    <a class="dropdown-item" href="/boxcricket">BOX CRICKET</a>
+                                    <a class="dropdown-item" href="/3asidefutsal">3 A-SIDE FUTSAL</a>
+                                    <a class="dropdown-item" href="/fieldcricket">FIELD CRICKET</a>
+                                    <a class="dropdown-item" href="/chess">CHESS</a>
+                                </div>
+                                <div class="col-lg-3 col-sm-4">
+                                    <a class="dropdown-item" href="/footballleague">FOOTBALL LEAGUE</a>
+                                    <a class="dropdown-item" href="/neoncricket">NEON CRICKET</a>
+                                    <a class="dropdown-item" href="/carromduet">CARROM(DUET)</a>
+                                    <a class="dropdown-item" href="/interdepartmentalfootball">INTERDEPARTMENT
+                                        FOOTBALL</a>
+                                </div>
+                                <div class="col-lg-3 col-sm-4">
+                                    <a class="dropdown-item" href="/1one1cricket">ONE ON ONE CRICKET</a>
+                                    <a class="dropdown-item" href="/carrom">CARROM(SINGLES)</a>
+                                    <a class="dropdown-item" href="/antichess">ANTI CHESS</a>
+                                    <a class="dropdown-item" href="/badminton">BADMINTON</a>
+                                    <a class="dropdown-item" href="/athletics">ATHLETICS</a>
+                                    <a class="dropdown-item" href="/kabbadi">KABBADI</a>
+                                    <a class="dropdown-item" href="/khokho">KHO-KHO</a>
+                                    <a class="dropdown-item" href="/tugofwar">TUG OF WAR</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        SIGMA
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="my-menu-dropdown2">
+                        <a class="dropdown-item" href="/mudrakala">MUDRAKALA</a>
+                        <a class="dropdown-item" href="/cresendo">CRESCENDO</a>
+                        <a class="dropdown-item" href="/theliteratureclub">THE LITERATURE CLUB</a>
+                        <a class="dropdown-item" href="/crew5678">CREW 5678</a>
+                        <a class="dropdown-item" href="/nautanki">NAUTANKI</a>
+                        <a class="dropdown-item" href="/camera">CAMERA</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">CONTACT US <span class="sr-only"></span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<section>
+    <!--****************************Main Event Carousel Starts--------------------------------------------------------------->
+    <div class="container-fluid mt-0 mb-0 mr-0 ml-0">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active d-block w-100" data-interval=5000s>
+                            <div class="card bg-dark text-white mx-auto"
+                                 style="width: 100%;font-family:'Poppins', sans-serif;color:black;">
+                                <img src="{{ url_for('static', filename='Images/traditionalday2019.jpg') }}"
+                                     class="card-img img-responsive image-resize" alt="..."
+                                     style="opacity:50%;width:100%;object-fit:cover;object-position:center;">
+                                <div class="card-img-overlay">
+                                    <div class="contentofcard mx-auto"
+                                         style="width: 100%;height: 100%;box-shadow:box-shadow: 0px 5px 15px rgba(0,0,0,.5);">
+                                        <h5 class="card-title text-center">TRADITIONAL DAY 2019</h5>
+                                        <p class="card-text text-center">Sparkling Teeth And Smiling Faces!
+                                            to Watch</p>
+                                        <div class="text-center">
+                                            <a href="/tradtionalday2019" class="btn btn-danger">Read More</a>
+                                            <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-interval=5000s>
+                            <div class="card bg-dark text-white mx-auto"
+                                 style="width: 100%;font-family:'Poppins', sans-serif;color:black;">
+                                <img src="{{ url_for('static', filename='Images/industryvisit2019.jpg') }}"
+                                     class="card-img img-responsive image-resize" alt="..."
+                                     style="opacity:50%;width:100%;object-fit:cover;object-position:center;">
+                                <div class="card-img-overlay">
+                                    <div class="contentofcard mx-auto"
+                                         style="width: 100%;height: 100%;box-shadow:box-shadow: 0px 5px 15px rgba(0,0,0,.5);">
+                                        <h5 class="card-title text-center">INDUSTRIAL VISIT 2019</h5>
+                                        <p class="card-text text-center">Understanding the industry some more...</p>
+                                        <div class="text-center">
+                                            <a href="#" class="btn btn-danger">Read More</a>
+                                            <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-interval=5000s>
+                            <div class="card text-white bg-dark mx-auto"
+                                 style="width: 100%;font-family:'Poppins', sans-serif;color:black;">
+                                <img src="{{ url_for('static', filename='Images/eccfexhibition2019.jpg') }}"
+                                     class="card-img img-responsive image-resize" alt="..."
+                                     style="opacity:50%;width:100%;object-fit:cover;object-position:center;">
+                                <div class="card-img-overlay">
+                                    <div class="contentofcard mx-auto"
+                                         style="width: 100%;height: 100%;box-shadow:box-shadow: 0px 5px 15px rgba(0,0,0,.5);">
+                                        <h5 class="card-title text-center">S.E. COMPS PROJECT EXHIBITION 2019 </h5>
+                                        <p class="card-text text-center">A Room full of Tech and Innovation</p>
+                                        <div class="text-center">
+                                            <a href="#" class="btn btn-danger">Read More</a>
+                                            <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true" style="color:black;"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--****************************************Main Event Carousel Ends------------------------------>
+    <!--****************************************Top Blogs Carousel Starts------------------------------>
+    <div class="col-sm-12 text-center my-3">
+        <h1>TOP BLOGS</h1>
+    </div>
+    <div class="owl-carousel owl-theme">
+        <div class="item">
+            <div class="mt-2 ml-2 mr-2 mb-2">
+                <div class="card" id="Topblogcard">
+                    <img src="{{ url_for('static', filename='Images/cesa2019.jpg') }}"
+                         class="card-img-top img-responsive image-resize" alt="blog-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">CESA 2019</h5>
+                        <p class="card-text">Technical Fest of Computer Department.</p>
+                        <a href="/fullblog" class="btn btn-danger">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="mx-auto">CATEGORY</h6>
+                        <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="mt-2 ml-2 mr-2 mb-2">
+                <div class="card" id="Topblogcard">
+                    <img src="{{ url_for('static', filename='Images/sih2020.jpg') }}"
+                         class="card-img-top img-responsive image-resize" alt="blog-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">S.E. COMPS SIH 2020</h5>
+                        <p class="card-text">Internal Smart India Hackathon 2020.</p>
+                        <a href="/fullblog" class="btn btn-danger">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="mx-auto">CATEGORY</h6>
+                        <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="mt-2 ml-2 mr-2 mb-2">
+                <div class="card" id="Topblogcard">
+                    <img src="{{ url_for('static', filename='Images/corporateday2019.jpg') }}"
+                         class="card-img-top img-responsive image-resize" alt="blog-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">S.E. COMPS CORPORATE DAY 2019</h5>
+                        <p class="card-text">Young Professionals' Day.</p>
+                        <a href="/fullblog" class="btn btn-danger">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="mx-auto">CATEGORY</h6>
+                        <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="mt-2 ml-2 mr-2 mb-2">
+                <div class="card" id="Topblogcard">
+                    <img src="{{ url_for('static', filename='Images/nature7.jpg') }}"
+                         class="card-img-top img-responsive image-resize" alt="blog-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Blog Title</h5>
+                        <p class="card-text">Description of blog in a few restricited amount of words.</p>
+                        <a href="/fullblog" class="btn btn-danger">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="mx-auto">CATEGORY</h6>
+                        <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="mt-2 ml-2 mr-2 mb-2">
+                <div class="card" id="Topblogcard">
+                    <img src="{{ url_for('static', filename='Images/nature8.jpg') }}"
+                         class="card-img-top img-responsive image-resize" alt="blog-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Blog Title</h5>
+                        <p class="card-text">Description of blog in a few restricited amount of words.</p>
+                        <a href="/fullblog" class="btn btn-danger">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="mx-auto">CATEGORY</h6>
+                        <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="mt-2 ml-2 mr-2 mb-2">
+                <div class="card" id="Topblogcard">
+                    <img src="{{ url_for('static', filename='Images/nature9.jpg') }}"
+                         class="card-img-top img-responsive image-resize" alt="blog-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Blog Title</h5>
+                        <p class="card-text">Description of blog in a few restricited amount of words.</p>
+                        <a href="/fullblog" class="btn btn-danger">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="mx-auto">CATEGORY</h6>
+                        <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="mt-2 ml-2 mr-2 mb-2">
+                <div class="card" id="Topblogcard">
+                    <img src="{{ url_for('static', filename='Images/nature10.jpg') }}"
+                         class="card-img-top img-responsive image-resize" alt="blog-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Blog Title</h5>
+                        <p class="card-text">Description of blog in a few restricited amount of words.</p>
+                        <a href="/fullblog" class="btn btn-danger">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="mx-auto">CATEGORY</h6>
+                        <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="mt-2 ml-2 mr-2 mb-2">
+                <div class="card" id="Topblogcard">
+                    <img src="{{ url_for('static', filename='Images/nature12.jpg') }}"
+                         class="card-img-top img-responsive image-resize" alt="blog-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Blog Title</h5>
+                        <p class="card-text">Description of blog in a few restricited amount of words.</p>
+                        <a href="/fullblog" class="btn btn-danger">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="mx-auto">CATEGORY</h6>
+                        <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="mt-2 ml-2 mr-2 mb-2">
+                <div class="card" id="Topblogcard">
+                    <img src="{{ url_for('static', filename='Images/nature11.jpg') }}"
+                         class="card-img-top img-responsive image-resize" alt="blog-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Blog Title</h5>
+                        <p class="card-text">Description of blog in a few restricited amount of words.</p>
+                        <a href="/fullblog" class="btn btn-danger">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        <h6 class="mx-auto">CATEGORY</h6>
+                        <a href="#" class="btn btn-danger"><i class="fa fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--*******************************************Top Blogs Carousel Ends--------------------------------------------->
+
+    <!--*********************************************BLOGS Starts----------------------------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="blog-post-overview">
+                    <div class="thumbnail-blog mx-auto" style="max-width:750px;">
+                        <img class="img-fluid img-responsive"
+                             src="{{ url_for('static', filename='Images/nature11.jpg') }}" alt="blog_image" style="width: 100%;
+          height: 50%;
+          object-fit: cover;
+          object-position:center;">
+                        <ul class="post-info navbar-nav flex-row" id="postinfo">
+                            <li><a href="#" class="text-center"><i class="fa fa-pencil mr-1"></i>Author</a></li>
+                            <li><a href="#" class="ml-3 text-center"><i class="fa fa-calendar mr-1"></i>January 20, 2020</a>
+                            </li>
+                            <li><a href="#" class="ml-3 text-center"><i class="fa fa-heart mr-1"></i>3</a></li>
+                        </ul>
+                    </div>
+                    <div class="blog-details" id="blogdetails">
+                        <a href="#">
+                            <h5>Blog Title Including Its Event Name, Preferably A Long Blog Title Which will Look
+                                Good</h5>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a href="/fullblog" class="btn btn-dark">Read More
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="blog-post-overview">
+                    <div class="thumbnail-blog mx-auto" style="max-width:750px;">
+                        <img class="img-fluid img-responsive"
+                             src="{{ url_for('static', filename='Images/nature12.jpg') }}" alt="blog_image" style="width: 100%;
+          height: 50%;
+          object-fit: cover;
+          object-position:center;">
+                        <ul class="post-info navbar-nav flex-row" id="postinfo">
+                            <li><a href="#" class="text-center"><i class="fa fa-pencil mr-1"></i>Author</a></li>
+                            <li><a href="#" class="ml-3 text-center"><i class="fa fa-calendar mr-1"></i>January 20, 2020</a>
+                            </li>
+                            <li><a href="#" class="ml-3 text-center"><i class="fa fa-heart mr-1"></i>3</a></li>
+                        </ul>
+                    </div>
+                    <div class="blog-details" id="blogdetails">
+                        <a href="#">
+                            <h5>Blog Title Including Its Event Name, Preferably A Long Blog Title Which will Look
+                                Good</h5>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a href="/fullblog" class="btn btn-dark">Read More
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="blog-post-overview">
+                    <div class="thumbnail-blog mx-auto" style="max-width:750px;">
+                        <img class="img-fluid img-responsive"
+                             src="{{ url_for('static', filename='Images/nature6.jpg') }}" alt="blog_image" style="width: 100%;
+          height: 50%;
+          object-fit: cover;
+          object-position:center;">
+                        <ul class="post-info navbar-nav flex-row" id="postinfo">
+                            <li><a href="#" class="text-center"><i class="fa fa-pencil mr-1"></i>Author</a></li>
+                            <li><a href="#" class="ml-3 text-center"><i class="fa fa-calendar mr-1"></i>January 20, 2020</a>
+                            </li>
+                            <li><a href="#" class="ml-3 text-center"><i class="fa fa-heart mr-1"></i>3</a></li>
+                        </ul>
+                    </div>
+                    <div class="blog-details" id="blogdetails">
+                        <a href="#">
+                            <h5>Blog Title Including Its Event Name, Preferably A Long Blog Title Which will Look
+                                Good</h5>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a href="/fullblog" class="btn btn-dark">Read More
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="blog-post-overview">
+                    <div class="thumbnail-blog mx-auto" style="max-width:750px;">
+                        <img class="img-fluid img-responsive"
+                             src="{{ url_for('static', filename='Images/nature7.jpg') }}" alt="blog_image" style="width: 100%;
+          height: 50%;
+          object-fit: cover;
+          object-position:center;">
+                        <ul class="post-info navbar-nav flex-row" id="postinfo">
+                            <li><a href="#" class="text-center"><i class="fa fa-pencil mr-1"></i>Author</a></li>
+                            <li><a href="#" class="ml-3 text-center"><i class="fa fa-calendar mr-1"></i>January 20, 2020</a>
+                            </li>
+                            <li><a href="#" class="ml-3 text-center"><i class="fa fa-heart mr-1"></i>3</a></li>
+                        </ul>
+                    </div>
+                    <div class="blog-details" id="blogdetails">
+                        <a href="#">
+                            <h5>Blog Title Including Its Event Name, Preferably A Long Blog Title Which will Look
+                                Good</h5>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a href="/fullblog" class="btn btn-dark">Read More
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="side-content col-lg-4 col-md-12 col-sm-12">
+                <div class="side-categories" id="side-event">
+                    <h5 class="text-left">POPULAR TAGS</h5>
+                    <a href="/hackathon" class="btn btn-dark">HACKATHON</a>
+                    <a href="/livecs" class="btn btn-dark">LIVE CS</a>
+                    <a href="/fashionshow" class="btn btn-dark">FASHION SHOW</a>
+                    <a href="crew5678" class="btn btn-dark">CREW 5678</a>
+                    <a href="/football" class="btn btn-dark">FOOTBALL</a>
+                    <a href="/techexpo" class="btn btn-dark">TECH EXPO</a>
+                    <a href="/fifa" class="btn btn-dark">FIFA</a>
+                    <a href="/credsendo" class="btn btn-dark">CRESCENDO</a>
+                </div>
+                <div class="AboutUs d-none d-sm-block" id="About-Us">
+                    <h5 class="text-center">MEET THE TEAM</h5>
+                    <div class="sankyabout text-center">
+                        <img class="img-responsive image-resize rounded-circle text-center"
+                             src="{{ url_for('static', filename='Images/sanky.jpg') }}" alt="sankalp image">
+                    </div>
+                    <div class="about-details text-center">
+                        <h3>Sankalp Kadam</h3>
+                        <p>TE COMPS</p>
+                        <p>Enthusiast about programming languages and software development.</p>
+                        <a href="https://www.facebook.com/sankalp.kadam.71/"><i class="fa fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/sankalp._.007/"><i class="fa fa-instagram"></i></a>
+                        <a href="https://twitter.com/SankalpKadam5"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="AboutUs d-none d-sm-block" id="About-Us">
+                    <div class="Mayureshabout text-center">
+                        <img class="img-responsive image-resize rounded-circle text-center"
+                             src="{{ url_for('static', filename='Images/mayu.jpg') }}" alt="Mayuresh Image">
+                    </div>
+                    <div class="about-details text-center">
+                        <h3>Mayuresh Kulkarni</h3>
+                        <p>TE COMPS</p>
+                        <p>Enthusiast about programming languages and software development.</p>
+                        <a href="#"><i class="fa fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+                <!--About Us Carousel only for smaller devices-->
+                <div class="mycarousel d-block d-sm-none" id="AboutUsCarousel">
+                    <h5 class="text-center">MEET THE TEAM</h5>
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval=2000>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="sankyabout text-center">
+                                    <img class="img-responsive image-resize rounded-circle text-center"
+                                         src="{{ url_for('static', filename='Images/sanky.jpg') }}" alt="sankalp image">
+                                </div>
+                                <div class="about-details text-center">
+                                    <h3>Sankalp Kadam</h3>
+                                    <p>TE COMPS</p>
+                                    <p>Enthusiast about programming languages and software development.</p>
+                                    <a href="https://www.facebook.com/sankalp.kadam.71/"><i
+                                            class="fa fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/sankalp._.007/"><i
+                                            class="fa fa-instagram"></i></a>
+                                    <a href="https://twitter.com/SankalpKadam5"><i class="fa fa-twitter"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-item active">
+                                <div class="Mayureshabout text-center">
+                                    <img class="img-responsive image-resize rounded-circle text-center"
+                                         src="{{ url_for('static', filename='Images/mayu.JPG') }}" alt="Mayuresh Image">
+                                </div>
+                                <div class="about-details text-center">
+                                    <h3>Mayuresh Kulkarni</h3>
+                                    <p>TE COMPS</p>
+                                    <p>Enthusiast about programming languages and software development.</p>
+                                    <a href="#"><i class="fa fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                           data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                           data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <!--About Us Carousel Ends-->
+                <div class="LoginForm" id="LoginForm">
+                    <h5 class="text-center">LOGIN</h5>
+                    <form class="text-center" action="index.html" method="post">
+                        <div class="username mt-2 text-center">
+                            <label class="text-center" for="UserName"><i
+                                    class="fa fa-user mr-3"></i>UserName</label><br>
+                            <input type="text" name="UserName" value="" placeholder="Enter Your UserName.."
+                                   id="UserName" class="text-center">
+                        </div>
+                        <div class="password mt-2 text-center d-block">
+                            <label class="text-center" for="Password"><i class="fa fa-key mr-3"></i>Password</label><br>
+                            <input type="password" name="UserName" value="" placeholder="Enter Your Password.."
+                                   id="Password" class="text-center">
+                        </div>
+                        <div class="btnsubmit text-center mt-3">
+                            <a href="/createpost" class="btn btn-dark"><i class="fa fa-lock mr-3"></i>SUBMIT</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!--************************************************Blogs Ends---------------------------------->
+    <footer class="bg-dark" id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4" id="About">
+                    <h3 class="text-center">About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4" id="instafeed">
+                    <h3 class="text-center">InstaGram Feed</h3>
+                    <div class="flex-row ml-4">
+                        <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature4.jpg') }}" alt="">
+                        <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature5.jpg') }}" alt="">
+                        <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature6.jpg') }}" alt="">
+                    </div>
+                    <div class="flex-row ml-4">
+                        <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature7.jpg') }}" alt="">
+                        <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature8.jpg') }}" alt="">
+                        <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature9.jpg') }}" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4" id="footersocial">
+                    <h3 class="text-center">Follow Us</h3>
+                    <div class="text-center">
+                        <a href="#"><i class="fa fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </footer>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='JS/navbar-style.js') }}" charset="utf-8"></script>
+<script src="{{ url_for('static', filename='JS/aos.js') }}" charset="utf-8">
+  AOS.init({
+    duration:1000,
+    offset:200
+  });
+
+</script>
+<script src="{{ url_for('static', filename='JS/jquery.min.js') }}" charset="utf-8"></script>
+<script src="{{ url_for('static', filename='JS/owl.carousel.js') }}" charset="utf-8"></script>
+<script src="{{ url_for('static', filename='JS/owl.carousel.min.js') }}" charset="utf-8"></script>
+</body>
+<!--End of index-->
+</html>

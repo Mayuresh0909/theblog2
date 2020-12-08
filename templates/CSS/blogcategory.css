@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Fredoka+One&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+h4{
+  font-family: 'Poppins',cursive;
+  padding-top: 30px;
+}
+/*Recent post section*/
+#postinfo{
+  left: 18%;
+}
+.blog-Author a{
+  color:grey;
+  font-style: italic;
+  font-size: 14px;
+}
+.blog-Author{
+  margin: 10px 0px;
+}
+.blog-post-overview{
+  margin:0px 0;
+}
+#blogdetails{
+  margin: 50px 0px;
+}
+.post-curve-line{
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+/*Recent post section Ends*/
+/*Footer Starts*/
+#footer{
+  margin-top: 50px;
+  color: white;
+}
+#About{
+  margin-top: 20px;
+  padding: 20px;
+}
+#About h3{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins',cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#About p{
+  font-family: 'Cairo', sans-serif;
+}
+#instafeed{
+  margin-top: 20px;
+}
+#instafeed h3{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins',cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#instafeed img{
+  display: inline-block;
+  width: 25%;
+  height: 50%;
+  margin: .3rem .4rem;
+}
+#footersocial{
+  margin-top: 20px;
+}
+#footersocial h3{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins',cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#footersocial a{
+  font-size: 25px;
+  margin: 10px;
+  color: white;
+}
+/*Footer Ends*/

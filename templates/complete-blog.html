@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/complete-blog.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Blog Website</title>
+  </head>
+  <body>
+    <!---Search bar Section-->
+      <div class="top-search-bar">
+        <div class="search-tab">
+          <form class="search-form" action="#" method="get">
+            <input type="search" name="search" value="" placeholder="Search and hit enter...">
+            <button type="submit" name="button"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <div class="mysocial-media">
+          <a href="#"><i class="fa fa-facebook-f"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-pinterest"></i></a>
+        </div>
+      </div>
+    <!---Search bar sections ends-->
+    <!---Menu bar-->
+    <div>
+      <!---Logo Image-->
+      <nav class="navbar navbar-light">
+        <a class="navbar-brand mx-auto d-none d-lg-block" href="index.html">
+          <img src="{{ url_for('static', filename='Images/bloggee.png') }}" width="161px" height="37px" alt="logo" loading="lazy">
+        </a>
+      </nav>
+    </div>
+    <!--Main Menu-->
+    <div id="Main-Menu" class="sticky-top">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light justify-content-sm-start" id="MenuBar">
+        <a class="navbar-brand d-lg-none inside-navbar-brand ml-lg-0 ml-2 mr-auto" id="inside-navbar-brand" href="index.html">
+          <img src="{{ url_for('static', filename='Images/bloggee.png') }}" width="161px" height="30px" alt="logo" loading="lazy">
+        </a>
+        <button id="navbutton" class="navbar-toggler align-self-start p-3" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mobileMenu d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end p-3 p-lg-0 mt-7 mt-lg-0" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-lg-auto align-self-stretch">
+            <li class="ml-auto">
+              <button type="button" name="close" id="closebutton" class="d-block d-lg-none"><h3 style="font-family:'Poppins', sans-serif;color:black;">X</h3></button>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="technicaldropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TECHNICAL</a>
+              <div class="dropdown-menu" aria-labelledby="technicaldropdown">
+                <a class="dropdown-item" href="#">HACKATHON</a>
+                <a class="dropdown-item" href="#">MOCK PLACEMENT</a>
+                <a class="dropdown-item" href="#">SOFTWARE DOCUMENTATION</a>
+                <a class="dropdown-item" href="#">TECHNOHUNT</a>
+                <a class="dropdown-item" href="#">BLIND CODE</a>
+                <a class="dropdown-item" href="#">CHEMSHALA</a>
+                <a class="dropdown-item" href="#">TECH EXPO</a>
+                <a class="dropdown-item" href="#">PROTOTYPE</a>
+                <a class="dropdown-item" href="#">TECHNICAL POSTER PRESENTATION</a>
+                <a class="dropdown-item" href="#">TECHNICAL QUIZ</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="navbarDropdownMenuNonTech">NON-TECHNICAL</a>
+              <div class="dropdown-menu" id="nontechsubmenu">
+                <div class="dropright d-none d-lg-block">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GAMING</a>
+                  <div class="dropdown-menu" id="dropmenu2">
+                    <a class="dropdown-item" href="#">PUBG</a>
+                    <a class="dropdown-item" href="#">LIVE CS</a>
+                    <a class="dropdown-item" href="#">FIFA</a>
+                    <a class="dropdown-item" href="#">LAN GAMING</a>
+                  </div>
+                </div>
+                <div class="dropright d-none d-lg-block">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" id="dancesubmenu" aria-haspopup="true" aria-expanded="false">DANCE</a>
+                  <div class="dropdown-menu" id="dropmenu3" aria-labelledby="dancesubmenu">
+                    <a class="dropdown-item" href="#">SOLO DANCE</a>
+                    <a class="dropdown-item" href="#">GROUP DANCE</a>
+                    <a class="dropdown-item" href="#">DUET</a>
+                  </div>
+                </div>
+                <div class="dropright d-none d-lg-block">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ARTISTRY</a>
+                  <div class="dropdown-menu" id="dropmenu4">
+                    <a class="dropdown-item" href="#">FILMZ</a>
+                    <a class="dropdown-item" href="#">PICTURESQUE</a>
+                    <a class="dropdown-item" href="#">STORY & POETRY</a>
+                    <a class="dropdown-item" href="#">FACE PAINTING</a>
+                    <a class="dropdown-item" href="#">TEESH ART</a>
+                  </div>
+                </div>
+                <div class="dropright d-none d-lg-block">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SINGING</a>
+                  <div class="dropdown-menu" id="dropmenu5">
+                    <a class="dropdown-item" href="#">SOLO</a>
+                    <a class="dropdown-item" href="#">DUET</a>
+                    <a class="dropdown-item" href="#">INSTRUMENTAL</a>
+                    <a class="dropdown-item" href="#">BAND WARS</a>
+                  </div>
+                </div>
+                <div class="dropright d-none d-lg-block">
+                  <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FUN</a>
+                  <div class="dropdown-menu" id="dropmenu6">
+                    <a class="dropdown-item" href="#">CSI(MURDER MYSTERY)</a>
+                    <a class="dropdown-item" href="#">ESCAPE THE ROOM</a>
+                    <a class="dropdown-item" href="#">ELOCUTION</a>
+                    <a class="dropdown-item" href="#">SCAVENGER HUNT</a>
+                    <a class="dropdown-item" href="#">WATER WARRIOR</a>
+                    <a class="dropdown-item" href="#">FASHION SHOW</a>
+                    <a class="dropdown-item" href="#">DEBATE</a>
+                    <a class="dropdown-item" href="#">WOLF OF WALL STREET</a>
+                    <a class="dropdown-item" href="#">SALT ACT</a>
+                    <a class="dropdown-item" href="#">INQUISITIVE</a>
+                    <a class="dropdown-item" href="#">TREASURE HUNT</a>
+                  </div>
+                </div>
+                <div class="container d-none d-lg-none" id="megamenu" style="font-family:'Poppins', sans-serif;color:black;">
+                  <div class="row">
+                    <div class=" col-sm-3 col-lg-3">
+                      <h6>GAMING</h6>
+                      <a class="dropdown-item" href="#">PUBG</a>
+                      <a class="dropdown-item" href="#">LIVE CS</a>
+                      <a class="dropdown-item" href="#">FIFA</a>
+                      <a class="dropdown-item" href="#">LAN GAMING</a>
+                    </div>
+                    <div class="col-sm-3 col-lg-3">
+                      <h6>DANCE</h6>
+                      <a class="dropdown-item" href="#">SOLO DANCE</a>
+                      <a class="dropdown-item" href="#">GROUP DANCE</a>
+                      <a class="dropdown-item" href="#">DUET</a>
+                    </div>
+                    <div class="col-sm-3 col-lg-3">
+                      <h6>SINGING</h6>
+                      <a class="dropdown-item" href="#">SOLO</a>
+                      <a class="dropdown-item" href="#">DUET</a>
+                      <a class="dropdown-item" href="#">INSTRUMENTAL</a>
+                      <a class="dropdown-item" href="#">BAND WARS</a>
+                    </div>
+                    <div class="col-sm-3 col-lg-3">
+                      <h6>ARTISTRY</h6>
+                      <a class="dropdown-item" href="#">FILMZ</a>
+                      <a class="dropdown-item" href="#">PICTURESQUE</a>
+                      <a class="dropdown-item" href="#">STORY & POETRY</a>
+                      <a class="dropdown-item" href="#">FACE PAINTING</a>
+                      <a class="dropdown-item" href="#">TEESH ART</a>
+                    </div>
+                    <div class="col-sm-3 col-lg-3">
+                      <h6>FUN</h6>
+                      <a class="dropdown-item" href="#">CSI(MURDER MYSTERY)</a>
+                      <a class="dropdown-item" href="#">ESCAPE THE ROOM</a>
+                      <a class="dropdown-item" href="#">ELOCUTION</a>
+                      <a class="dropdown-item" href="#">SCAVENGER HUNT</a>
+                      <a class="dropdown-item" href="#">WATER WARRIOR</a>
+                      <a class="dropdown-item" href="#">FASHION SHOW</a>
+                      <a class="dropdown-item" href="#">DEBATE</a>
+                      <a class="dropdown-item" href="#">WOLF OF WALL STREET</a>
+                      <a class="dropdown-item" href="#">SALT ACT</a>
+                      <a class="dropdown-item" href="#">INQUISITIVE</a>
+                      <a class="dropdown-item" href="#">TREASURE HUNT</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                DEPARTMENT
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="my-menu-dropdown">
+                <a class="dropdown-item" href="#">COMPUTER</a>
+                <a class="dropdown-item" href="#">MECHANICAL</a>
+                <a class="dropdown-item" href="#">IT</a>
+                <a class="dropdown-item" href="#">EXTC</a>
+                <a class="dropdown-item" href="#">INSTRUMENTATION</a>
+                <a class="dropdown-item" href="#">CHEMICAL</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="sportsbutton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">SPORTS</a>
+                <div class="dropdown-menu">
+                  <div class="dropright d-none d-lg-block">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BOARD GAMES</a>
+                    <div class="dropdown-menu" id="dropmenu7">
+                      <a class="dropdown-item" href="#">CHESS</a>
+                      <a class="dropdown-item" href="#">CARROM(SINGLES)</a>
+                      <a class="dropdown-item" href="#">CARROM(DUET)</a>
+                      <a class="dropdown-item" href="#">ANTI CHESS</a>
+                    </div>
+                  </div>
+                    <div class="dropright d-none d-lg-block">
+                      <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRICKET</a>
+                      <div class="dropdown-menu" id="dropmenu8">
+                        <a class="dropdown-item" href="#">BOX CRICKET</a>
+                        <a class="dropdown-item" href="#">NEON CRICKET</a>
+                        <a class="dropdown-item" href="#">FIELD CRICKET</a>
+                        <a class="dropdown-item" href="#">ONE ON ONE CRICKET</a>
+                      </div>
+                    </div>
+                      <div class="dropright d-none d-lg-block">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FOOTBALL</a>
+                        <div class="dropdown-menu" id="dropmenu9">
+                          <a class="dropdown-item" href="#">FOOTBALL LEAGUE</a>
+                          <a class="dropdown-item" href="#">3 A-SIDE FUTSAL</a>
+                          <a class="dropdown-item" href="#">INTERDEPARTMENT FOOTBALL</a>
+                        </div>
+                      </div>
+                      <div class="dropright d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">FIELD SPORTS</a>
+                        <div class="dropdown-menu" id="dropmenu10">
+                          <a class="dropdown-item" href="#">BADMINTON</a>
+                          <a class="dropdown-item" href="#">KABBADI</a>
+                          <a class="dropdown-item" href="#">ATHLETICS</a>
+                          <a class="dropdown-item" href="#">KHO-KHO</a>
+                          <a class="dropdown-item" href="#">TUG OF WAR</a>
+                        </div>
+                      </div>
+
+                  <div class="container d-none d-lg-none" id="sportsubmenu" style="font-family:'Poppins', sans-serif;color:black;">
+                    <div class="row">
+                      <div class="col-lg-3 col-sm-4">
+                        <a class="dropdown-item" href="#">BOX CRICKET</a>
+                        <a class="dropdown-item" href="#">3 A-SIDE FUTSAL</a>
+                        <a class="dropdown-item" href="#">FIELD CRICKET</a>
+                        <a class="dropdown-item" href="#">CHESS</a>
+                      </div>
+                      <div class="col-lg-3 col-sm-4">
+                        <a class="dropdown-item" href="#">FOOTBALL LEAGUE</a>
+                        <a class="dropdown-item" href="#">NEON CRICKET</a>
+                        <a class="dropdown-item" href="#">CARROM(DUET)</a>
+                        <a class="dropdown-item" href="#">INTERDEPARTMENT FOOTBALL</a>
+                      </div>
+                      <div class="col-lg-3 col-sm-4">
+                        <a class="dropdown-item" href="#">ONE ON ONE CRICKET</a>
+                        <a class="dropdown-item" href="#">CARROM(SINGLES)</a>
+                        <a class="dropdown-item" href="#">ANTI CHESS</a>
+                        <a class="dropdown-item" href="#">BADMINTON</a>
+                        <a class="dropdown-item" href="#">ATHLETICS</a>
+                        <a class="dropdown-item" href="#">KABBADI</a>
+                        <a class="dropdown-item" href="#">KHO-KHO</a>
+                        <a class="dropdown-item" href="#">TUG OF WAR</a>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                SIGMA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="my-menu-dropdown2">
+                <a class="dropdown-item" href="#">MUDRAKALA</a>
+                <a class="dropdown-item" href="#">CRESCENDO</a>
+                <a class="dropdown-item" href="#">THE LITERATURE CLUB</a>
+                <a class="dropdown-item" href="#">CREW 5678</a>
+                <a class="dropdown-item" href="#">NAUTANKI</a>
+                <a class="dropdown-item" href="#">CAMERA</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!---------------------------------------Main Blog Content Starts------------------------------->
+     <div class="container-fluid">
+       <div class="row">
+         <h3></h3>
+         <div class="col-sm-12 col-lg-8">
+           <div class="blog-post-overview">
+             <div class="thumbnail-blog mx-auto" style="max-width:750px;">
+               <img class="img-fluid img-responsive" src="{{ url_for('static', filename='Images/nature11.jpg') }}" alt="blog_image" style="width: 100%;
+               height: 50%;
+               object-fit: cover;
+               object-position:center;">
+                 <ul class="post-info navbar-nav flex-row" id="postinfo">
+                   <li><a href="#" class="ml-3 text-center"><i class="fa fa-calendar mr-1"></i>January 20, 2020</a></li>
+                 </ul>
+             </div>
+             <div class="blog-details" id="blogdetails">
+               <a href="#">
+                 <h5>{{post.title}}</h5>
+               </a>
+               <div id="post-meta">
+                 <p><span>by</span> <span id="author">Author</span> <span><a href="#"><i class="fa fa-heart mr-1 ml-3"></i>3</a></span></p>
+               </div>
+
+               <p>{{post.content}}</p>
+
+
+             </div>
+           </div>
+         </div>
+         <div class=" side-content col-sm-12 col-lg-4">
+           <div class="side-categories" id="side-event">
+             <h5 class="text-left">POPULAR TAGS</h5>
+               <a href="#" class="btn btn-dark">HACKATHON</a>
+               <a href="#" class="btn btn-dark">LIVE CS</a>
+               <a href="#" class="btn btn-dark">FASHION SHOW</a>
+               <a href="#" class="btn btn-dark">CREW 5678</a>
+               <a href="#" class="btn btn-dark">FOOTBALL</a>
+               <a href="#" class="btn btn-dark">DJ NIGHT</a>
+               <a href="#" class="btn btn-dark">FIFA</a>
+               <a href="#" class="btn btn-dark">CRESCENDO</a>
+           </div>
+           <div class="text-center" id="titleforrelatedpost">
+             <h5>RELATED POST</h5>
+           </div>
+           <div class="container-fluid">
+             <div class="row">
+               <div class="col-6">
+                 <div class="thumbnail-blog" style="max-width:750px;">
+                   <img class="img-fluid img-responsive" src="{{ url_for('static', filename='Images/nature3.jpg') }}" alt="blog_image">
+                 </div>
+               </div>
+               <div class="col-6">
+                 <div class="sideblog-details" id="sideblogdetails">
+                   <a href="#">
+                     <h6>Blog Title Including Its Event Name</h6>
+                   </a>
+                   <p><span>by</span> Author</p>
+                  </div>
+               </div>
+             </div>
+           </div>
+           <div class="container-fluid" id="relatedpost">
+             <div class="row justify-content-center">
+               <div class="col-6">
+                 <div class="thumbnail-blog mx-auto" style="max-width:750px;">
+                   <img class="img-fluid img-responsive" src="{{ url_for('static', filename='Images/nature6.jpg') }}" alt="blog_image" style="width: 100%;
+                   height: 50%;
+                   object-fit: cover;
+                   object-position:center;">
+                 </div>
+               </div>
+               <div class="col-6">
+                 <div class="blog-details" id="sideblogdetails2">
+                   <a href="#">
+                     <h6>Blog Title Including Its Event Name</h6>
+                   </a>
+                   <p><span>by</span> Author</p>
+                  </div>
+               </div>
+             </div>
+           </div>
+           <div class="container-fluid" id="relatedpost2">
+             <div class="row justify-content-center">
+               <div class="col-6">
+                 <div class="thumbnail-blog mx-auto" style="max-width:750px;">
+                   <img class="img-fluid img-responsive" src="{{ url_for('static', filename='Images/nature4.jpg') }}" alt="blog_image" style="width: 100%;
+                   height: 50%;
+                   object-fit: cover;
+                   object-position:center;">
+                 </div>
+               </div>
+               <div class="col-6">
+                 <div class="blog-details" id="sideblogdetails3">
+                   <a href="#">
+                     <h6>Blog Title Including Its Event Name</h6>
+                   </a>
+                   <p><span>by</span> Author</p>
+                  </div>
+               </div>
+             </div>
+           </div>
+           <div class="container-fluid">
+             <div class="row">
+               <div class="col-6">
+                 <div class="thumbnail-blog" style="max-width:750px;">
+                   <img class="img-fluid img-responsive" src="{{ url_for('static', filename='Images/nature2.jpg') }}" alt="blog_image">
+                 </div>
+               </div>
+               <div class="col-6">
+                 <div class="sideblog-details" id="sideblogdetails4">
+                   <a href="#">
+                     <h6>Blog Title Including Its Event Name</h6>
+                   </a>
+                   <p><span>by</span> Author</p>
+                  </div>
+               </div>
+             </div>
+           </div>
+           <div class="container-fluid">
+             <div class="row">
+               <div class="col-6">
+                 <div class="thumbnail-blog" style="max-width:750px;">
+                   <img class="img-fluid img-responsive" src="{{ url_for('static', filename='Images/nature11.jpg') }}" alt="blog_image">
+                 </div>
+               </div>
+               <div class="col-6">
+                 <div class="sideblog-details" id="sideblogdetails5">
+                   <a href="#">
+                     <h6>Blog Title Including Its Event Name</h6>
+                   </a>
+                   <p><span>by</span> Author</p>
+                  </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+    <!----------------------------------------Main Blog Content Ends------------------------------>
+    <footer class="bg-dark" id="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4" id="About">
+            <h3 class="text-center">About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4" id="instafeed">
+            <h3 class="text-center">InstaGram Feed</h3>
+                <div class="flex-row ml-4">
+                  <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature4.jpg') }}" alt="">
+                  <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature5.jpg') }}" alt="">
+                  <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature6.jpg') }}" alt="">
+                </div>
+                <div class="flex-row ml-4">
+                  <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature7.jpg') }}" alt="">
+                  <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature8.jpg') }}" alt="">
+                  <img class="img-thumbnail" src="{{ url_for('static', filename='Images/nature9.jpg') }}" alt="">
+                </div>
+              </div>
+              <div class="col-sm-12 col-lg-4" id="footersocial">
+                <h3 class="text-center">Follow Us</h3>
+                <div class="text-center">
+                  <a href="#"><i class="fa fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-pinterest"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='JS/complete-blog.js') }}" charset="utf-8"></script>
+  </body>
+</html>
